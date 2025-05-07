@@ -1,5 +1,5 @@
 {
-  "name": "postinstall-postinstall",
+  "name": "@ulissemini/postinstall-postinstall",
   "version": "2.0.0",
   "main": "",
   "scripts": {
@@ -12,8 +12,8 @@
   ],
   "license": "MIT",
   "description": "runs your app's postinstall on this lib's postinstall",
-  "repository": "https://github.com/ds300/postinstall-postinstall",
-  "author": "David Sheldrick",
+  "repository": "https://github.com/generalagents/postinstall-postinstall",
+  "author": "Ulisse Mini",
   "devDependencies": {
     "np": "^2.20.1"
   }
