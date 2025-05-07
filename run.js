@@ -12,14 +12,7 @@ if (fs.existsSync(packageJsonPath)) {
 
   if (packageJson.scripts && packageJson.scripts.postinstall) {
     const pkgManager = shouldUseYarn() ? 'yarn' : 'npm';
-    try {
-      execSync(`${pkgManager} run postinstall`, {cwd: appPath})
-    } catch (error) {
-      console.error('Postinstall failed:')
-      if (error.stdout) console.log(`stdout: ${error.stdout.toString()}`)
-      if (error.stderr) console.error(`stderr: ${error.stderr.toString()}`)
-      process.exit(1)
-    }
+    execSync(`${pkgManager} run postinstall`, {cwd: appPath, stdio: 'inherit'})
   }
 }
 
